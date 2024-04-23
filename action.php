@@ -99,7 +99,7 @@ if(isset($_POST["remail"])){
 		echo -1;
 		exit();
 	}
-	else if(!$password == $repassword){
+	else if($password != $repassword){
 		echo 0;
 		exit();
 	} else {
