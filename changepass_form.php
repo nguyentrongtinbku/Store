@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<form id = "changepass-form">
+	<form id="changepass-form">
 		<div class="mb-3">
 			<label for="currentpassword" class="form-label">Mật khẩu hiện tại</label>
 			<div class="input-group">
@@ -9,7 +9,7 @@
 				</button>
 			</div>
 		</div>
-        <div class="mb-3">
+		<div class="mb-3">
 			<label for="newpassword" class="form-label">Mật khẩu mới</label>
 			<div class="input-group">
 				<input type="password" name="newpassword" class="form-control" id="newpassword" placeholder="Mật khẩu">
@@ -18,28 +18,28 @@
 				</button>
 			</div>
 		</div>
-		<button type="submit" id = "change-btn" class="btn btn-primary">Thay đổi</button>
+		<button type="submit" id="change-btn" class="btn btn-primary">Thay đổi</button>
 	</form>
 </div>
 <script>
-    document.getElementById('showPasswordTogglechange').addEventListener('click', function () {
-        var passwordInput = document.getElementById('currentpassword');
-        var passwordFieldType = passwordInput.getAttribute('type');
+	document.getElementById('showPasswordTogglechange').addEventListener('click', function() {
+		var passwordInput = document.getElementById('currentpassword');
+		var passwordFieldType = passwordInput.getAttribute('type');
 
-        if (passwordFieldType === 'password') {
-            passwordInput.setAttribute('type', 'text');
-        } else {
-            passwordInput.setAttribute('type', 'password');
-        }
-    });
-    document.getElementById('showPasswordTogglenew').addEventListener('click', function () {
-        var passwordInput = document.getElementById('newpassword');
-        var passwordFieldType = passwordInput.getAttribute('type');
+		if (passwordFieldType === 'password') {
+			passwordInput.setAttribute('type', 'text');
+		} else {
+			passwordInput.setAttribute('type', 'password');
+		}
+	});
+	document.getElementById('showPasswordTogglenew').addEventListener('click', function() {
+		var passwordInput = document.getElementById('newpassword');
+		var passwordFieldType = passwordInput.getAttribute('type');
 
-        if (passwordFieldType === 'password') {
-            passwordInput.setAttribute('type', 'text');
-        } else {
-            passwordInput.setAttribute('type', 'password');
-        }
-    });
+		if (passwordFieldType === 'password') {
+			passwordInput.setAttribute('type', 'text');
+		} else {
+			passwordInput.setAttribute('type', 'password');
+		}
+	});
 </script>

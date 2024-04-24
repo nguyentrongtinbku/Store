@@ -1,26 +1,24 @@
 <?php
 include 'header.php';
 include 'db.php';
-if($_GET['id']){
+if ($_GET['id']) {
 	$category_id = $_GET['id'];
-}
-else{
+} else {
 	header('Location: index.php');
 }
 $sql = " SELECT * FROM products ";
 $sql = " SELECT * FROM products WHERE product_cat = $category_id";
-if(isset($_GET['brand'])) {
-    $brand_id = $_GET['brand'];
-    $sql .= " AND product_brand = $brand_id";
+if (isset($_GET['brand'])) {
+	$brand_id = $_GET['brand'];
+	$sql .= " AND product_brand = $brand_id";
 }
-if(isset($_GET['sort'])) {
-    $sort_type = $_GET['sort'];
-    if($sort_type == 1) {
-        $sql .= " ORDER BY product_price ASC";
-    }
-	else if($sort_type == 2) {
-        $sql .= " ORDER BY product_price DESC";
-    }
+if (isset($_GET['sort'])) {
+	$sort_type = $_GET['sort'];
+	if ($sort_type == 1) {
+		$sql .= " ORDER BY product_price ASC";
+	} else if ($sort_type == 2) {
+		$sql .= " ORDER BY product_price DESC";
+	}
 }
 $title = " SELECT * FROM categories WHERE cat_id = $category_id";
 $sql_brand = "SELECT * FROM brands";
@@ -32,17 +30,17 @@ $result_title = mysqli_query($con, $title);
 $result_brands = mysqli_query($con, $sql_brand);
 $row_title = mysqli_fetch_assoc($result_title);
 $cat_name = $row_title['cat_title']
-?>	
+?>
 <div class="procate py-3">
-	<div class="container py-3" style = "background-color: white;">
+	<div class="container py-3" style="background-color: white;">
 		<div class="row">
 			<div class="col-md-3 filter py-3 d-flex flex-column align-items-center">
 				<h5 style="color:red">THƯƠNG HIỆU</h5>
-				<a class = " ms-3" href="store.php?id=<?php echo $category_id ?>">TẤT CẢ</a><br>
+				<a class=" ms-3" href="store.php?id=<?php echo $category_id ?>">TẤT CẢ</a><br>
 				<?php
-					while($row_brand = mysqli_fetch_assoc($result_brands)){
-						echo '<a class = " ms-3" href="store.php?id='.$category_id.'&brand='.$row_brand['brand_id'].'">'.$row_brand['brand_title'].'</a><br>';
-					}
+				while ($row_brand = mysqli_fetch_assoc($result_brands)) {
+					echo '<a class = " ms-3" href="store.php?id=' . $category_id . '&brand=' . $row_brand['brand_id'] . '">' . $row_brand['brand_title'] . '</a><br>';
+				}
 				?>
 			</div>
 			<div class="col-md-9">
@@ -68,7 +66,7 @@ $cat_name = $row_title['cat_title']
 				</div>
 
 				<?php
-				while($row = mysqli_fetch_assoc($result)){
+				while ($row = mysqli_fetch_assoc($result)) {
 					echo '<div class="row my-3">';
 					for ($i = 1; $i <= 3; $i++) {
 						$pro_id    = $row['product_id'];
@@ -77,22 +75,22 @@ $cat_name = $row_title['cat_title']
 						$pro_title = $row['product_title'];
 						$pro_price = $row['product_price'];
 						$pro_image = $row['product_image'];
-						echo'
+						echo '
 						<div class="col-md-4">
 							<div class="card text-center py-2 cardcustom style="width: 18rem;">
-							<a href="product.php?p='.$pro_id.'"><img style="height: 180px; width: auto;" src="'.$pro_image.'" class="img-fluid card-img-top" alt="card"></a>
+							<a href="product.php?p=' . $pro_id . '"><img style="height: 180px; width: auto;" src="' . $pro_image . '" class="img-fluid card-img-top" alt="card"></a>
 								<div class="card-body">
-									<p class="product-category">'.$cat_name.'</p>
-									<h5 class="card-title"><a href="product.php?p='.$pro_id.'"><span class="truncate">'.$pro_title.'</span></a></h5>
-									<h5 style="color: red;">'.$pro_price.'$</h5>
-									<button pid="'.$pro_id.'" id="product" class="add-to-cart-btn btn btn-danger" href="#"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button>
+									<p class="product-category">' . $cat_name . '</p>
+									<h5 class="card-title"><a href="product.php?p=' . $pro_id . '"><span class="truncate">' . $pro_title . '</span></a></h5>
+									<h5 style="color: red;">' . $pro_price . '$</h5>
+									<button pid="' . $pro_id . '" id="product" class="add-to-cart-btn btn btn-danger" href="#"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button>
 								</div>
 							</div>
 						</div>
 						';
-						if($i!=3){
-							if(!$row = mysqli_fetch_assoc($result))
-							break;
+						if ($i != 3) {
+							if (!$row = mysqli_fetch_assoc($result))
+								break;
 						}
 					}
 					echo '</div>';

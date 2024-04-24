@@ -3,31 +3,33 @@ $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
 <style>
-    <?php if ($current_page == 'user.php'): ?>
-    .user-container {
+    <?php if ($current_page == 'user.php') : ?>.user-container {
         background-color: #6c4703;
     }
-    <?php elseif ($current_page == 'brand.php'): ?>
-    .brand-container {
+
+    <?php elseif ($current_page == 'brand.php') : ?>.brand-container {
         background-color: #6c4703;
     }
-    <?php elseif ($current_page == 'category.php'): ?>
-    .category-container {
+
+    <?php elseif ($current_page == 'category.php') : ?>.category-container {
         background-color: #6c4703;
     }
-    <?php elseif ($current_page == 'product.php'): ?>
-    .product-container {
+
+    <?php elseif ($current_page == 'product.php') : ?>.product-container {
         background-color: #6c4703;
     }
-    <?php endif; 
-    ?>
-    .user-container:hover,.brand-container:hover,.category-container:hover,.product-container:hover {
+
+    <?php endif;
+    ?>.user-container:hover,
+    .brand-container:hover,
+    .category-container:hover,
+    .product-container:hover {
         background-color: #6c4703;
         transition: background-color 0.3s ease;
     }
 </style>
 
-<div class="col-md-2 leftbar" style = "background-color: orange;">
+<div class="col-md-2 leftbar" style="background-color: orange;">
     <div class="text-center topbar my-3">
         <h2><i class="fa-solid fa-user-secret fa-3x"></i></h2>
     </div>
@@ -45,7 +47,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <a href="product.php"> <i class="fa-solid fa-store "></i> Sản phẩm</a>
         </div>
         <div class="container py-4">
-            <a href="../logout.php"  ><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
+            <a href="../logout.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
         </div>
     </div>
 </div>

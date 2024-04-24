@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<form id = "loginform">
+	<form id="loginform">
 		<div class="mb-3">
 			<label for="lemail" class="form-label">Email</label>
 			<input type="email" name="lemail" class="form-control" placeholder="Email">
@@ -17,14 +17,14 @@
 	</form>
 </div>
 <script>
-    document.getElementById('showPasswordTogglelogin').addEventListener('click', function () {
-        var passwordInput = document.getElementById('loginpassword');
-        var passwordFieldType = passwordInput.getAttribute('type');
+	document.getElementById('showPasswordTogglelogin').addEventListener('click', function() {
+		var passwordInput = document.getElementById('loginpassword');
+		var passwordFieldType = passwordInput.getAttribute('type');
 
-        if (passwordFieldType === 'password') {
-            passwordInput.setAttribute('type', 'text');
-        } else {
-            passwordInput.setAttribute('type', 'password');
-        }
-    });
+		if (passwordFieldType === 'password') {
+			passwordInput.setAttribute('type', 'text');
+		} else {
+			passwordInput.setAttribute('type', 'password');
+		}
+	});
 </script>
