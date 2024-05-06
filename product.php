@@ -14,7 +14,7 @@ $row = mysqli_fetch_assoc($result)
 <div class="mainproduct">
 	<div class="container px-4 py-5" style="background-color: white;">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<div class="text-center mb-3">
 					<img id="main-image" class="img-thumbnail" style="width: 70%; height: auto;" src="<?php echo $row['product_image'] ?>" />
 				</div>
@@ -24,7 +24,7 @@ $row = mysqli_fetch_assoc($result)
 					<img onclick="change_image(this)" class="img-thumbnail" src="<?php echo $row['product_image'] ?>" width="70">
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-sm-6">
 				<h2><?php echo $row['product_title'] ?></h2>
 				<div class="my-2" style="color: #D10024;">
 					<i class="fa fa-star"></i>
@@ -71,7 +71,7 @@ $row = mysqli_fetch_assoc($result)
 		</div>
 		<div class="row mt-5 ms-1 px-3 py-3" style="background-color: #fef6f5; border-radius: 10px;">
 			<h3>Bình luận</h3>
-			<div class="col-md-7 mt-3">
+			<div class="col-sm-7 mt-3">
 				<div class="row mb-2" style="border-bottom: 1px solid #ccc;">
 					<div class="col-md-4">
 						<h6>An</h6>
@@ -91,7 +91,7 @@ $row = mysqli_fetch_assoc($result)
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-sm-4">
 				<label for="ques" class="form-label">Câu hỏi của bạn</label>
 				<textarea class="form-control" id="ques" rows="3"></textarea>
 				<button class="btn btn-primary mt-2">Gửi</button>

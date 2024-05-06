@@ -1,7 +1,7 @@
 <footer id="footer">
 	<div class="container py-3">
 		<div class="row">
-			<div class="col-md-5 col-xs-6 about ps-4">
+			<div class="col-5 col-sm-5 col-xs-6 about ps-4">
 				<h3 class="ms-4" style="color: white">ABOUT US</h3>
 				<ul style="list-style-type: none;">
 					<li><a href="#"><i class="fa fa-map-marker"></i> Hồ Chí Minh</a></li>
@@ -9,7 +9,7 @@
 					<li><a href="#"><i class="fa-solid fa-envelope"></i> admin@gmail.com</a></li>
 				</ul>
 			</div>
-			<div class="col-md-4 text-center mt-4">
+			<div class="col-4 col-sm-4 text-center mt-4 payment">
 				<ul class="footer-payments" style="list-style-type: none;">
 					<li><a href="#"><i style="color: black;" class="fa-brands fa-cc-visa fa-2x"></i></a></li>
 					<li><a href="#"><i style="color: black;" class="fa fa-credit-card fa-2x"></i></a></li>
@@ -18,7 +18,7 @@
 				</ul>
 			</div>
 
-			<div class="col-md-3 col-xs-6 cate">
+			<div class="col-3 col-sm-3 col-xs-6 cate">
 				<h3 style="color: white;" class="ms-4">CONTACT</h3>
 				<ul style="list-style-type: none;">
 					<li><a href="#"><i class="fa-brands fa-youtube"></i> Youtube</a></li>
