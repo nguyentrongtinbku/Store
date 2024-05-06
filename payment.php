@@ -4,7 +4,6 @@ include "header.php";
 if (isset($_SESSION["uid"])) {
     $sql = "SELECT * FROM cart WHERE user_id='$_SESSION[uid]'";
     $query = mysqli_query($con, $sql);
-    $result = mysqli_fetch_array($query);
     $u_sql = "SELECT * FROM user_info WHERE user_id = '$_SESSION[uid]'";
     $u_result = mysqli_query($con, $u_sql);
     $row = mysqli_fetch_assoc($u_result);
