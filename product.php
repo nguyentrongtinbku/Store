@@ -118,7 +118,7 @@ $row = mysqli_fetch_assoc($result)
 							echo '
 										<div class="carousel-item active" data-bs-interval="4000">
 											<div class="col-md-2">
-												<div class="card text-center py-2" style="width: 18rem;">
+												<div class=" card card-slide text-center py-2">
 												<a href="product.php?p=' . $pro_id . '"><img style="height: 180px; width: auto;" src="' . $pro_image . '" class=" img-fluid card-img-top" alt="card"></a>
 													<div class="card-body">
 													<p class="product-category">' . $cat_name . '</p>
@@ -141,7 +141,7 @@ $row = mysqli_fetch_assoc($result)
 									echo '
 										<div class="carousel-item" data-bs-interval="4000">
 											<div class="col-md-2">
-												<div class="card text-center py-2" style="width: 18rem;">
+												<div class=" card card-slide text-center py-2">
 												<a href="product.php?p=' . $pro_id . '"><img style="height: 180px; width: auto;" src="' . $pro_image . '" class=" img-fluid card-img-top" alt="card"></a>
 													<div class="card-body">
 													<p class="product-category">' . $cat_name . '</p>
